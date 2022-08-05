@@ -1,0 +1,8 @@
+{
+  "back": "Go back to the homepage",
+  "counter_one": "clicked one time",
+  "counter_other": "clicked {{count}} time",
+  "counter_zero": "Click me!",
+  "title": "Page two",
+  "welcome": "Welcome to page 2"
+}

@@ -1,0 +1,7 @@
+{
+  "footer": "Today is {{date, date_huge}}",
+  "footer_afternoon": "Good afternoon! It's {{date, date_huge}}",
+  "footer_evening": "Good evening! Today was the {{date, date_huge}}",
+  "footer_morning": "Good morning! Today is {{date, date_huge}} | Have a nice day!",
+  "header": "Welcome to {{siteTitle}}"
+}

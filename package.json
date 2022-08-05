@@ -1,0 +1,52 @@
+{
+  "name": "locize-gatsby-example",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "dependencies": {
+    "gatsby": "4.20.0",
+    "gatsby-plugin-image": "2.20.0",
+    "gatsby-plugin-manifest": "4.20.0",
+    "gatsby-plugin-react-helmet": "5.20.0",
+    "gatsby-plugin-react-i18next": "2.0.1",
+    "gatsby-plugin-sharp": "4.20.0",
+    "gatsby-source-filesystem": "4.20.0",
+    "gatsby-transformer-sharp": "4.20.0",
+    "i18next": "21.8.12",
+    "luxon": "3.0.1",
+    "prop-types": "15.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-helmet": "6.1.0",
+    "react-i18next": "11.18.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.18.10",
+    "@babel/core": "7.18.10",
+    "babel-plugin-i18next-extract": "0.9.0-rc",
+    "babel-preset-gatsby": "2.20.0",
+    "locize-cli": "7.12.3",
+    "mkdirp": "1.0.4",
+    "prettier": "2.7.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "start": "npm run develop",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "extract": "babel --config-file ./babel-extract.config.js -o tmp/chunk.js 'src/**/*.{js,jsx,ts,tsx}' && rm -rf tmp",
+    "downloadLocales": "locize download --project-id=5d47a999-5c34-4161-a389-bc2189507a50 --ver=latest --clean=true --path=./locales",
+    "syncLocales": "locize sync --project-id=5d47a999-5c34-4161-a389-bc2189507a50 --ver=latest --api-key=42ca9d58-18da-44c7-8dd3-8f59b8c35bda --path=./locales"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/locize/locize-gatsby-example"
+  }
+}
