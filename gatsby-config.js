@@ -47,7 +47,7 @@ module.exports = {
         defaultLanguage,
         siteUrl,
         i18nextOptions: {
-          debug: true,
+          // debug: true,
           defaultNS: 'common',
           lowerCaseLng: true,
           interpolation: {
