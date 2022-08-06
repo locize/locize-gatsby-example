@@ -48,10 +48,14 @@ module.exports = {
         siteUrl,
         i18nextOptions: {
           // debug: true,
+          fallbackLng: defaultLanguage,
+          supportedLngs: languages,
           defaultNS: 'common',
-          lowerCaseLng: true,
           interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
+          },
+          react: {
+            bindI18n: 'languageChanged editorSaved',
           }
         },
         pages: [

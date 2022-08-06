@@ -12,6 +12,7 @@ import { DateTime } from 'luxon';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 import Header from './header';
 import './layout.css';
+import { locizePlugin, setEditorLng } from 'locize';
 
 const getGreetingTime = (d = DateTime.now()) => {
 	const split_afternoon = 12; // 24hr time to split the afternoon
@@ -42,6 +43,8 @@ const Layout = ({ children }) => {
     i18n.services.formatter.add('date_huge', (value, lng, options) => {
       return DateTime.fromJSDate(value).setLocale(lng).toLocaleString(DateTime.DATE_HUGE)
     });
+    locizePlugin.init(i18n);
+    setEditorLng(i18n.resolvedLanguage);
   }
 
   return (
