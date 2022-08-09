@@ -39,10 +39,12 @@ const Layout = ({ children }) => {
     }
   `);
 
+  // defining custom formatters is normally done immediately after the i18next.init call, but with gatsby-plugin-react-i18next is not possible, so let's add it here
   if (!i18n.services.formatter.date_huge) {
     i18n.services.formatter.add('date_huge', (value, lng, options) => {
       return DateTime.fromJSDate(value).setLocale(lng).toLocaleString(DateTime.DATE_HUGE)
     });
+    // also the locize plugin normally is automatically configured, but here we need to do it that way
     locizePlugin.init(i18n);
     setEditorLng(i18n.resolvedLanguage);
   }
